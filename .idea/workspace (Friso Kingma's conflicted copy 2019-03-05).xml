@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/runimagenet.sh" line="8" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="997dbe14-81a2-4f32-9c87-115ff6b262f1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/bitswap$rand.coverage" NAME="rand Coverage Results" MODIFIED="1550274907435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/torch" />
+    <SUITE FILE_PATH="coverage/bitswap$create_imagenet.coverage" NAME="create_imagenet Coverage Results" MODIFIED="1550428539038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/bitswap$modules.coverage" NAME="modules Coverage Results" MODIFIED="1550439769466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/torch" />
+    <SUITE FILE_PATH="coverage/bitswap$ans.coverage" NAME="ans Coverage Results" MODIFIED="1549673126352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitswap$mnist_train.coverage" NAME="mnist_train Coverage Results" MODIFIED="1550276520943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/bitswap$ans2.coverage" NAME="ans2 Coverage Results" MODIFIED="1550465907003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitswap$imagenet_train.coverage" NAME="imagenet_train Coverage Results" MODIFIED="1551318292924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/bitswap$cifar_train.coverage" NAME="cifar_train Coverage Results" MODIFIED="1550352003934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/runimagenetdistributed.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="194" selection-start-line="16" selection-start-column="189" selection-end-line="16" selection-end-column="194" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>99995</find>
+      <find>print(</find>
+      <find>print</find>
+      <find>ema.</find>
+      <find>ema</find>
+      <find>conv2</find>
+      <find>gain</find>
+      <find>e+01</find>
+      <find>e+02</find>
+      <find>grad</find>
+      <find>_proc</find>
+      <find>gen_proc</find>
+      <find>ada</find>
+      <find>.perdim</find>
+      <find>Dependent</find>
+      <find>clip</find>
+      <find>model</find>
+      <find>scale</find>
+      <find>log(</find>
+      <find>exp(</find>
+      <find>log1p</find>
+      <find>modules</find>
+      <find>softplus</find>
+      <find>Adam</find>
+      <find>zsamples</find>
+      <find>global_step</find>
+      <find>mult</find>
+      <find>batch_size</find>
+      <find>ngpu</find>
+      <find>{}</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/utils/compression.py" />
+        <option value="$PROJECT_DIR$/launch.sh" />
+        <option value="$PROJECT_DIR$/runtmux.sh" />
+        <option value="$PROJECT_DIR$/model/mnist_train.py" />
+        <option value="$PROJECT_DIR$/runcifar.sh" />
+        <option value="$PROJECT_DIR$/model/cifar_train.py" />
+        <option value="$PROJECT_DIR$/model/create_imagenet.py" />
+        <option value="$PROJECT_DIR$/ans2 (Friso Kingma's conflicted copy 2019-02-17).py" />
+        <option value="$PROJECT_DIR$/ans2.py" />
+        <option value="$PROJECT_DIR$/utils/torch/rand.py" />
+        <option value="$PROJECT_DIR$/model/imagenet_train16x16.py" />
+        <option value="$PROJECT_DIR$/model/imagenet_train.py" />
+        <option value="$PROJECT_DIR$/utils/torch/modules.py" />
+        <option value="$PROJECT_DIR$/runimagenet.sh" />
+        <option value="$PROJECT_DIR$/model/imagenetrev_train.py" />
+        <option value="$PROJECT_DIR$/model/imagenet16_train.py" />
+        <option value="$PROJECT_DIR$/ans.py" />
+        <option value="$PROJECT_DIR$/runimagenetdistributed.sh" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="3775" />
+    <option name="height" value="2164" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bitswap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bitswap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bitswap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bitswap" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2018_10_pixelcnn_plus" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/model" />
+      <recent name="$PROJECT_DIR$/utils/modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/utils" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.ans">
+    <configuration name="ans" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitswap" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ans.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="create_imagenet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitswap" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/create_imagenet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="imagenet16_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitswap" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/imagenet16_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="imagenet_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitswap" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/imagenet_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="imagenetrev_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitswap" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/imagenetrev_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.create_imagenet" />
+      <item itemvalue="Python.imagenet_train" />
+      <item itemvalue="Python.imagenet16_train" />
+      <item itemvalue="Python.imagenetrev_train" />
+      <item itemvalue="Python.ans" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ans" />
+        <item itemvalue="Python.imagenetrev_train" />
+        <item itemvalue="Python.imagenet16_train" />
+        <item itemvalue="Python.imagenet_train" />
+        <item itemvalue="Python.create_imagenet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="997dbe14-81a2-4f32-9c87-115ff6b262f1" name="Default Changelist" comment="" />
+      <created>1549488590908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549488590908</updated>
+      <workItem from="1550638332026" duration="7548000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7548000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="3775" height="2164" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960043" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329907" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968034" weight="0.54136074" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733618" weight="0.3999021" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49733618" visible="true" weight="0.46793932" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50266385" side_tool="true" visible="true" weight="0.46793932" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model/mnist_train.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model/imagenet16_train.py</url>
+          <line>523</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ans.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ans.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ans.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ans.py</url>
+          <line>126</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>del samples</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samples</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>torch.cuda.empty_cache()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samples.cpu().numpy()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samples.cpu()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samples.device</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zcentres.device</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zcentres</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samples = samples.detach().cpu()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>torch.Tensor(1)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Logistic().cdf(torch.Tensor(1))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Logistic().cdf(torch.Tensor(2))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Logistic().cdf(5.)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Logistic().cdf(5)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/model/__init__.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torchvision/transforms/__init__.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/163839985/numpy/random/mtrand.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torchvision/datasets/mnist.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/distributions/transforms.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torchvision/datasets/mnist.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/utils/data/dataset.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/utils/data/dataloader.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/bisect.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/tensorboardX/summary.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/tensorboardX/writer.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1786212826/builtins.py" />
+    <entry file="file://$PROJECT_DIR$/model/mnist_train.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/genericpath.py" />
+    <entry file="file://$PROJECT_DIR$/model/create_imagenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/cifar_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="701" column="33" lean-forward="true" selection-start-line="701" selection-start-column="33" selection-end-line="701" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torchvision/datasets/cifar.py" />
+    <entry file="file://$PROJECT_DIR$/ans2 (Friso Kingma's conflicted copy 2019-02-17).py" />
+    <entry file="file://$PROJECT_DIR$/runmnist.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runcifar.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7956">
+          <caret line="1683" selection-start-line="1683" selection-end-line="1683" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/tensorflow/contrib/session_bundle/exporter.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/cuda/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/utils/data/distributed.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/numpy/core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="301" column="8" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/utils/bottleneck/__main__.py" />
+    <entry file="file://$PROJECT_DIR$/utils/torch/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/nn/modules/dropout.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/nn/functional.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/nn/modules/conv.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/163839985/torch/_C/_VariableFunctions.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/optim/adam.py" />
+    <entry file="file://$USER_HOME$/bits-back/lib/python3.6/site-packages/torch/nn/utils/clip_grad.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/distributions/uniform.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/distributions/distribution.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/distributions/transformed_distribution.py" />
+    <entry file="file://$PROJECT_DIR$/model (Selective Sync Conflict)/imagenet_train.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/nn/functional.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/nn/modules/activation.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/optim/adam.py" />
+    <entry file="file://$PROJECT_DIR$/utils/torch/rand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imagenet_train_rev.py" />
+    <entry file="file://$PROJECT_DIR$/model/imagenet_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="930" column="20" selection-start-line="930" selection-start-column="20" selection-end-line="930" selection-end-column="20" />
+          <folding>
+            <element signature="e#599#721#0" />
+            <element signature="e#755#959#0" />
+            <element signature="e#988#1227#0" />
+            <element signature="e#1264#2731#0" />
+            <element signature="e#2768#3637#0" />
+            <element signature="e#3673#4755#0" />
+            <element signature="e#4795#5191#0" />
+            <element signature="e#5018#5191#0" />
+            <element signature="e#5221#25043#0" />
+            <element signature="e#5456#5491#0" />
+            <element signature="e#6708#6986#0" />
+            <element signature="e#7028#7089#0" />
+            <element signature="e#7978#8056#0" />
+            <element signature="e#8066#8118#0" />
+            <element signature="e#10567#10624#0" />
+            <element signature="e#10754#11185#0" />
+            <element signature="e#11230#11749#0" />
+            <element signature="e#11793#12192#0" />
+            <element signature="e#12237#12636#0" />
+            <element signature="e#12646#12687#0" />
+            <element signature="e#12960#13391#0" />
+            <element signature="e#13434#13953#0" />
+            <element signature="e#13995#14355#0" />
+            <element signature="e#14398#14725#0" />
+            <element signature="e#14735#14774#0" />
+            <element signature="e#16728#16768#0" />
+            <element signature="e#17258#17303#0" />
+            <element signature="e#17344#17848#0" />
+            <element signature="e#17735#17799#0" />
+            <element signature="e#17883#18234#0" />
+            <element signature="e#18285#18430#0" />
+            <element signature="e#18618#18709#0" />
+            <element signature="e#18750#19209#0" />
+            <element signature="e#18936#19007#0" />
+            <element signature="e#19245#19744#0" />
+            <element signature="e#19486#19562#0" />
+            <element signature="e#19795#19986#0" />
+            <element signature="e#20364#21118#0" />
+            <element signature="e#20848#20949#0" />
+            <element signature="e#20984#21094#0" />
+            <element signature="e#21476#21542#0" />
+            <element signature="e#21868#22041#0" />
+            <element signature="e#22165#22210#0" />
+            <element signature="e#23222#23285#0" />
+            <element signature="e#23699#24206#0" />
+            <element signature="e#23920#24206#0" />
+            <element signature="e#24575#24907#0" />
+            <element signature="e#24651#24907#0" />
+            <element signature="e#25227#25483#0" />
+            <element signature="e#25752#26758#0" />
+            <element signature="e#26527#26758#0" />
+            <element signature="e#26990#27016#0" />
+            <element signature="e#27181#27420#0" />
+            <element signature="e#27614#30777#0" />
+            <element signature="e#27760#27939#0" />
+            <element signature="e#27819#27939#0" />
+            <element signature="e#28068#28103#0" />
+            <element signature="e#28282#28290#0" />
+            <element signature="e#29071#29111#0" />
+            <element signature="e#29327#29478#0" />
+            <element signature="e#29579#30777#0" />
+            <element signature="e#30508#30777#0" />
+            <element signature="e#30783#30807#0" />
+            <element signature="e#31016#32028#0" />
+            <element signature="e#31072#31130#0" />
+            <element signature="e#31398#31456#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/nn/modules/container.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+          <folding>
+            <element signature="e#1418#1721#0" expanded="true" />
+            <element signature="e#2951#3043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runimagenet.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/bits-back/lib/python3.6/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="768" selection-start-line="768" selection-end-line="768" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/torch/modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+          <folding>
+            <element signature="e#1036#1345#0" expanded="true" />
+            <element signature="e#3310#4064#0" expanded="true" />
+            <element signature="e#6873#7019#0" expanded="true" />
+            <element signature="e#7827#7855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/imagenetrev_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
+          <folding>
+            <element signature="e#599#721#0" />
+            <element signature="e#755#959#0" />
+            <element signature="e#988#1227#0" />
+            <element signature="e#1264#2701#0" />
+            <element signature="e#2738#3632#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#953#1313#0" expanded="true" />
+            <element signature="e#4939#4955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/imagenet16_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="597" selection-start-line="597" selection-end-line="607" selection-end-column="109" />
+          <folding>
+            <element signature="e#599#721#0" />
+            <element signature="e#755#959#0" />
+            <element signature="e#988#1227#0" />
+            <element signature="e#1264#2731#0" />
+            <element signature="e#2768#3637#0" />
+            <element signature="e#3673#4755#0" />
+            <element signature="e#4795#5191#0" />
+            <element signature="e#5018#5191#0" />
+            <element signature="e#5429#16972#0" expanded="true" />
+            <element signature="e#5456#5491#0" />
+            <element signature="e#6710#6988#0" />
+            <element signature="e#7030#7091#0" />
+            <element signature="e#7980#8058#0" />
+            <element signature="e#8068#8120#0" />
+            <element signature="e#10488#10545#0" />
+            <element signature="e#10675#11106#0" />
+            <element signature="e#11151#11670#0" />
+            <element signature="e#11714#12113#0" />
+            <element signature="e#12158#12557#0" />
+            <element signature="e#12567#12608#0" />
+            <element signature="e#12881#13312#0" />
+            <element signature="e#13355#13874#0" />
+            <element signature="e#13916#14276#0" />
+            <element signature="e#14319#14646#0" />
+            <element signature="e#14656#14695#0" />
+            <element signature="e#16572#16612#0" />
+            <element signature="e#17102#17147#0" />
+            <element signature="e#17188#17651#0" />
+            <element signature="e#17538#17602#0" />
+            <element signature="e#17686#18034#0" />
+            <element signature="e#18084#18229#0" />
+            <element signature="e#18321#19796#0" expanded="true" />
+            <element signature="e#18358#19767#0" expanded="true" />
+            <element signature="e#18417#18508#0" />
+            <element signature="e#19240#19316#0" />
+            <element signature="e#19549#19740#0" />
+            <element signature="e#20118#20872#0" />
+            <element signature="e#20602#20703#0" />
+            <element signature="e#20738#20848#0" />
+            <element signature="e#21230#21296#0" />
+            <element signature="e#21506#22205#0" expanded="true" />
+            <element signature="e#21622#21795#0" />
+            <element signature="e#21919#21964#0" />
+            <element signature="e#22976#23039#0" />
+            <element signature="e#24329#24661#0" />
+            <element signature="e#24405#24661#0" />
+            <element signature="e#24981#25237#0" />
+            <element signature="e#25506#26512#0" />
+            <element signature="e#26281#26512#0" />
+            <element signature="e#26744#26770#0" />
+            <element signature="e#26935#27174#0" />
+            <element signature="e#27368#30531#0" />
+            <element signature="e#27514#27693#0" />
+            <element signature="e#27573#27693#0" />
+            <element signature="e#27822#27857#0" />
+            <element signature="e#28036#28044#0" />
+            <element signature="e#28825#28865#0" />
+            <element signature="e#29081#29232#0" />
+            <element signature="e#29333#30531#0" />
+            <element signature="e#30262#30531#0" />
+            <element signature="e#30537#30561#0" />
+            <element signature="e#30770#31782#0" />
+            <element signature="e#30826#30884#0" />
+            <element signature="e#31152#31210#0" />
+            <element signature="e#32073#32097#0" />
+            <element signature="e#32366#32749#0" />
+            <element signature="e#32541#32646#0" />
+            <element signature="e#32685#32749#0" />
+            <element signature="e#32780#33387#0" />
+            <element signature="e#33021#33329#0" />
+            <element signature="e#33478#33517#0" />
+            <element signature="e#33569#40763#0" />
+            <element signature="e#35732#35915#0" />
+            <element signature="e#37003#37056#0" />
+            <element signature="e#37917#38131#0" />
+            <element signature="e#38203#38512#0" />
+            <element signature="e#38840#39105#0" />
+            <element signature="e#39666#39785#0" />
+            <element signature="e#40124#40147#0" />
+            <element signature="e#40558#40763#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runimagenetdistributed.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="194" selection-start-line="16" selection-start-column="189" selection-end-line="16" selection-end-column="194" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
