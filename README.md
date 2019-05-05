@@ -1,4 +1,4 @@
-#Bit-Swap
+# Bit-Swap
 
 Code for reproducing results of [Bit-Swap: Practical Lossless Compression with Recursive Bits Back Coding]().
 
