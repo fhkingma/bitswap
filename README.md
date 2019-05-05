@@ -5,7 +5,17 @@ Code for reproducing results of [Bit-Swap: Practical Lossless Compression with R
 The code is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/). The paper is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/).
 
 ## Introduction
-The ''bits back'' argument suggests that latent variable models can be turned into lossless compression schemes. Translating the ''bits back'' argument into efficient and practical lossless compression schemes for general latent variable models, however, is still an open problem. Bits-Back with Asymmetric Numeral Systems ([BB-ANS](https://github.com/bits-back/bits-back)), makes bits back coding practically feasible for latent variable models with one latent layer, but it is inefficient for hierarchical latent variable models. In the paper we propose Bit-Swap, a new compression scheme that generalizes BB-ANS and achieves strictly better compression rates for hierarchical latent variable models with Markov chain structure. Through experiments we verify that our proposed technique results in lossless compression rates that are empirically superior to existing techniques.
+We present a lossless compression scheme that results in compression rates that are empirically superior to existing techniques, called Bit-Swap. Our work builds on [BB-ANS]() that was originally proposed in [(Townsend et al., 2018)](). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. When considering the average net bitrate (explained in Section 2.3 in the paper), Bit-Swap outperforms other benchmark lossless compression schemes, as can be seen in the Table below.
+
+|              | MNIST | CIFAR-10 | ImageNet (32x32) |
+|--------------|-------|----------|------------------|
+| Uncompressed | 8.00  | 8.00     | 8.00             |
+| gzip         | 1.63  | 7.36     | 7.31             |
+| bz2          | 1.41  | 6.94     | 6.99             |
+| LZMA         | 1.39  | 6.06     | 6.09             |
+| PNG          | 2.80  | 5.87     | 6.39             |
+| WebP         | 2.10  | 4.61     | 5.29             |
+| **Bit-Swap** | **1.27**|**3.79**|**4.48**          |
 
 ## Overview
 The repository consists of two main parts:
@@ -86,6 +96,9 @@ mpiexec -np 8 python imagenet_train.py --nz=2 --width=255
 mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ### Compression
+##### Pre-Trained model checkpoints
+You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
+
 ##### MNIST
 ###### 8 latent layers
 ```
@@ -162,6 +175,10 @@ python cma.py
 python stackplot.py
 ```
 
+## Citation
+```
+citation
+```
 
 ## Contact
 Please contact Friso Kingma ([fhkingma@gmail.com](mailto:fhkingma@gmail.com)) if you have any questions.
