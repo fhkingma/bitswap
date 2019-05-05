@@ -2,25 +2,8 @@
 
 Code for reproducing results of [Bit-Swap: Practical Lossless Compression with Recursive Bits Back Coding]().
 
-The code is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/). The paper is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/).
+The code is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/). The paper is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/). You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
 
-1. [Introduction](##Introduction)
-2. [Overview](##Overview)
-3. [Requirements](##Requirements)
-4. [Launch](##Launch)
-    1. [Training](###Model training)
-        1. [MNIST](#####MNIST (on 1 GPU))
-        2. [CIFAR-10](#####CIFAR-10 (on 8 GPU's with OpenMPI + Horovod))
-        3. [ImageNet (32x32)]()
-    2. [Compression](###Compression)
-        1. [Pre-trained model checkpoints](#####Pre-Trained model checkpoints)
-        2. [MNIST](#####MNIST)
-        3. [CIFAR-10](#####CIFAR-10)
-        4. [ImageNet (32x32)](#####ImageNet (32x32))
-    3. [Plots](###Plots)
-5. [Citation](##Citation)
-6. [Questions](##Questions)
-7. [Credits](##Credits and Acknowledgements)
 
 ## Introduction
 We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed in [(Townsend et al., 2018)](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. When considering the average net bitrate (explained in Section 2.3 in the paper), Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
