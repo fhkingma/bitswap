@@ -23,7 +23,7 @@ The repository consists of two main parts:
 - Training of the variational autoencoders
 - Compression with Bit-Swap and BB-ANS using the trained models
 
-Scripts relating to **training of the models** on MNIST ([mnist_train.py](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py)), CIFAR-10 ([cifar_train.py](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py)) and ImageNet (32x32) ([imagenet_train.py](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py)) can be found in the subdirectory [model](https://github.com/fhkingma/bitswap/tree/master/model). Scripts relating to **compression with Bit-Swap and BB-ANS** of MNIST ([mnist_compress.py](https://github.com/fhkingma/bitswap/blob/master/mnist_compress.py)), CIFAR-10 ([cifar_compress.py](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py)) and ImageNet (32x32) ([imagenet_compress.py](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) are in the top directory. The script for compression using the benchmark compressors ([benchmark_compress.py]()) and the script for discretization of the latent space ([discretization.py](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
+Scripts relating to **training of the models** on MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py)), CIFAR-10 ([cifar_train.py](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py)) and ImageNet (32x32) ([imagenet_train.py](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py)) can be found in the subdirectory [model](https://github.com/fhkingma/bitswap/tree/master/model). Scripts relating to **compression with Bit-Swap and BB-ANS** of MNIST ([mnist_compress.py](https://github.com/fhkingma/bitswap/blob/master/mnist_compress.py)), CIFAR-10 ([cifar_compress.py](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py)) and ImageNet (32x32) ([imagenet_compress.py](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) are in the top directory. The script for compression using the benchmark compressors ([benchmark_compress.py]()) and the script for discretization of the latent space ([discretization.py](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
 
 ## Requirements
 - Python (3.7)
@@ -42,6 +42,10 @@ Scripts relating to **training of the models** on MNIST ([mnist_train.py](https:
 Run
 ```
 pip install -r requirements.txt
+```
+and add the top directory to the ``$PYTHONPATH`` variable. For example:
+```
+export PYTHONPATH=$PYTHONPATH:~/bitswap
 ```
 
 Installation instructions for OpenMPI + Horovod are available on the [github page of Horovod](https://github.com/horovod/horovod).
@@ -69,7 +73,7 @@ python mnist_train.py --nz=1 --width=64
 ##### CIFAR-10 (on 8 GPU's with OpenMPI + Horovod)
 ###### 8 latent layers
 ```
-mpiexec -np 8 cifar_train.py --nz=8 --width=252
+mpiexec -np 8 python cifar_train.py --nz=8 --width=252
 ```
 ###### 4 latent layers
 ```
@@ -84,6 +88,11 @@ mpiexec -np 8 python cifar_train.py --nz=2 --width=255
 mpiexec -np 8 python cifar_train.py --nz=1 --width=256
 ```
 ##### ImageNet (32x32) (on 8 GPU's with OpenMPI + Horovod)
+###### Prepare ImageNet (32x32)
+First download the version of ImageNet that is downsized to 32x32 pixels [here](http://image-net.org/small/download.php)
+```
+python create_imagenet.py
+```
 ###### 4 latent layers
 ```
 mpiexec -np 8 python imagenet_train.py --nz=4 --width=254
@@ -98,7 +107,7 @@ mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ### Compression
 ##### Pre-Trained model checkpoints
-You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
+You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip). Unpack the train and validation set in the directory ``model/data/imagenet/``
 
 ##### MNIST
 ###### 8 latent layers

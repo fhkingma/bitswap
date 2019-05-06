@@ -804,6 +804,8 @@ def test(model, device, epoch, ema, data_loader, tag, root_process):
         # if the current ELBO is better than the ELBO's before, save parameters
         if elbo < model.best_elbo and not np.isnan(elbo):
             model.logger.add_scalar('elbo/besttest', elbo, epoch)
+            if not os.path.exists(f'params/imagenet/'):
+                os.makedirs(f'params/imagenet/')
             torch.save(model.state_dict(), f'params/imagenet/{tag}')
             torch.save(model.state_dict(), f'params/imagenet/epoch{epoch}_{tag}')
             print("saved params\n")

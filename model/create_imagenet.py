@@ -37,5 +37,5 @@ def convert_path_to_npy(*, path='~/train_32x32', outfile='~/train_32x32.npy'):
     np.save(outfile, imgs)
 
 if __name__ == '__main__':
-    convert_path_to_npy(path='/Users/fhkingma/Dropbox/python/bitswap/model/data/train_32x32', outfile='/Users/fhkingma/Dropbox/python/bitswap/model/data/train_32x32.npy')
-    convert_path_to_npy(path='/Users/fhkingma/Dropbox/python/bitswap/model/data/valid_32x32', outfile='/Users/fhkingma/Dropbox/python/bitswap/model/data/valid_32x32.npy')
+    convert_path_to_npy(path='data/train_32x32', outfile='data/train/train.npy')
+    convert_path_to_npy(path='data/valid_32x32', outfile='data/test/test.npy')
