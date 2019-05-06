@@ -836,7 +836,7 @@ if __name__ == '__main__':
     parser.add_argument('--interval', default=100, type=int, help="interval for logging/printing of relevant values")
     parser.add_argument('--epochs', default=10000000000, type=int, help="number of sweeps over the dataset (epochs)")
     parser.add_argument('--blocks', default=8, type=int, help="number of ResNet blocks")
-    parser.add_argument('--width', default=32, type=int, help="number of channels in the convolutions in the ResNet blocks")
+    parser.add_argument('--width', default=64, type=int, help="number of channels in the convolutions in the ResNet blocks")
     parser.add_argument('--dropout', default=0.2, type=float, help="dropout rate of the hidden units")
     parser.add_argument('--kernel', default=3, type=int, help="size of the convolutional filter (kernel) in the ResNet blocks")
     parser.add_argument('--batch', default=128, type=int, help="size of the mini-batch for gradient descent")

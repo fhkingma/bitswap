@@ -837,7 +837,7 @@ if __name__ == '__main__':
     parser.add_argument('--width', default=256, type=int, help="number of channels in the convolutions in the ResNet blocks")
     parser.add_argument('--dropout', default=0., type=float, help="dropout rate of the hidden units")
     parser.add_argument('--kernel', default=3, type=int, help="size of the convolutional filter (kernel) in the ResNet blocks")
-    parser.add_argument('--batch', default=16, type=int, help="size of the mini-batch for gradient descent")
+    parser.add_argument('--batch', default=128, type=int, help="size of the mini-batch for gradient descent")
     parser.add_argument('--dist', default=0, type=int, help="distribute (1) over different gpu's and use Horovod to do so, or not (0)")
     parser.add_argument('--lr', default=2e-3, type=float, help="learning rate gradient descent")
     parser.add_argument('--schedule', default=1, type=float, help="learning rate schedule: yes (1) or no (0)")
