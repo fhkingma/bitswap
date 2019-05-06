@@ -23,7 +23,7 @@ The repository consists of two main parts:
 - Training of the variational autoencoders
 - Compression with Bit-Swap and BB-ANS using the trained models
 
-Scripts relating to **training of the models** on MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py)), CIFAR-10 ([cifar_train.py](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py)) and ImageNet (32x32) ([imagenet_train.py](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py)) can be found in the subdirectory [model](https://github.com/fhkingma/bitswap/tree/master/model). Scripts relating to **compression with Bit-Swap and BB-ANS** of MNIST ([mnist_compress.py](https://github.com/fhkingma/bitswap/blob/master/mnist_compress.py)), CIFAR-10 ([cifar_compress.py](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py)) and ImageNet (32x32) ([imagenet_compress.py](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) are in the top directory. The script for compression using the benchmark compressors ([benchmark_compress.py]()) and the script for discretization of the latent space ([discretization.py](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
+Scripts relating to **training of the models** on MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py)), CIFAR-10 ([``cifar_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py)) and ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py)) can be found in the subdirectory [``model/``](https://github.com/fhkingma/bitswap/tree/master/model). Scripts relating to **compression with Bit-Swap and BB-ANS** of MNIST ([``mnist_compress.py``](https://github.com/fhkingma/bitswap/blob/master/mnist_compress.py)), CIFAR-10 ([``cifar_compress.py``](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py)) and ImageNet (32x32) ([``imagenet_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) are in the top directory. The script for compression using the benchmark compressors ([``benchmark_compress.py``]()) and the script for discretization of the latent space ([``discretization.py``](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
 
 ## Requirements
 - Python (3.7)
@@ -89,7 +89,7 @@ mpiexec -np 8 python cifar_train.py --nz=1 --width=256
 ```
 ##### ImageNet (32x32) (on 8 GPU's with OpenMPI + Horovod)
 ###### Prepare ImageNet (32x32)
-First download the version of ImageNet that is downsized to 32x32 pixels [here](http://image-net.org/small/download.php)
+First download the version of ImageNet that is downsized to 32x32 pixels [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in the directory ``model/data/imagenet/``. After that, run
 ```
 python create_imagenet.py
 ```
@@ -107,7 +107,7 @@ mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ### Compression
 ##### Pre-Trained model checkpoints
-You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip). Unpack the train and validation set in the directory ``model/data/imagenet/``
+You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
 
 ##### MNIST
 ###### 8 latent layers
