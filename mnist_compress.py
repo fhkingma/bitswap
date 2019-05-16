@@ -104,7 +104,7 @@ def compress(quantbits, nz, bitswap, gpu):
     decompress = False
 
     # <=== MODEL ===>
-    model = Model(xs = (1, 32, 32), nz=nz, zchannels=1, nprocessing=4, proc_kern_size=5, kernel_size=3, resdepth=8, reswidth=reswidth, gate=False, concatelu=False).to(device)
+    model = Model(xs = (1, 32, 32), nz=nz, zchannels=1, nprocessing=4, kernel_size=3, resdepth=8, reswidth=reswidth).to(device)
     model.load_state_dict(
         torch.load(f'model/params/mnist/nz{nz}',
                    map_location=lambda storage, location: storage
@@ -382,5 +382,5 @@ if __name__ == '__main__':
 
     for nz in [nz]:
         for bits in [quantbits]:
-            for bitswap in [1, 0]:
+            for bitswap in [bitswap]:
                 compress(bits, nz, bitswap, gpu)

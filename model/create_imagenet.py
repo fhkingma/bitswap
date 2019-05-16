@@ -3,6 +3,7 @@ import scipy.ndimage
 import os
 from os import listdir
 from os.path import isfile, join
+from tqdm import tqdm
 
 # function to convert ImageNet folder files into a Numpy compatible .npy file
 # based on create_imagenet_benchmark_datasets.py from https://github.com/aravindsrinivas/flowpp
@@ -16,7 +17,7 @@ def convert_path_to_npy(*, path='~/train_32x32', outfile='~/train_32x32.npy'):
     imgs = []
 
     # check all images for correct shapes etc. and dump them into
-    for i in range(len(files)):
+    for i in tqdm(range(len(files))):
         print(i)
         img = scipy.ndimage.imread(join(path, files[i]))
         img = img.astype('uint8')

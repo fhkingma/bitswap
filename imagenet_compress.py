@@ -104,7 +104,7 @@ def compress(quantbits, nz, bitswap, gpu):
     decompress = False
 
     # <=== MODEL ===>
-    model = Model(xs = (3, 32, 32), nz=nz, zchannels=8, nprocessing=4, proc_kern_size=5, kernel_size=3, resdepth=8, reswidth=reswidth, gate=False, concatelu=False).to(device)
+    model = Model(xs = (3, 32, 32), nz=nz, zchannels=8, nprocessing=4, kernel_size=3, resdepth=8, reswidth=reswidth).to(device)
     model.load_state_dict(
         torch.load(f'model/params/imagenet/nz{nz}',
                    map_location=lambda storage, location: storage
@@ -368,7 +368,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu', default=0, type=int) # assign to gpu
     parser.add_argument('--nz', default=2, type=int) # choose number of latent variables
-    parser.add_argument('--quantbits', default=12, type=int) # choose discretization precision
+    parser.add_argument('--quantbits', default=10, type=int) # choose discretization precision
     parser.add_argument('--bitswap', default=1, type=int) # choose whether to use Bit-Swap or not
 
     args = parser.parse_args()
@@ -381,5 +381,5 @@ if __name__ == '__main__':
 
     for nz in [nz]:
         for bits in [quantbits]:
-            for bitswap in [1, 0]:
+            for bitswap in [bitswap]:
                 compress(bits, nz, bitswap, gpu)

@@ -135,12 +135,12 @@ class Model(nn.Module):
                                          init_scale=scale if self.nz > 1 else 2 ** 0.5 * scale)
 
         # shape: [32,16,16] -> [1,16,16]
-        self.infer_scale = modules.WnConv2d(self.reswidth,
-                                            self.zchannels,
-                                            self.kernel_size,
-                                            1,
-                                            padding,
-                                            init_scale=scale if self.nz > 1 else 2 ** 0.5 * scale)
+        self.infer_std = modules.WnConv2d(self.reswidth,
+                                          self.zchannels,
+                                          self.kernel_size,
+                                          1,
+                                          padding,
+                                          init_scale=scale if self.nz > 1 else 2 ** 0.5 * scale)
 
         # <===== DEEP INFERENCE MODEL =====>
         # the deeper (zi > 1) inference models
@@ -185,7 +185,7 @@ class Model(nn.Module):
             )
             for i in range(self.nz - 1)])
 
-        self.deepinfer_scale = nn.ModuleList([
+        self.deepinfer_std = nn.ModuleList([
             # shape: [32,16,16] -> [1,16,16]
             nn.Sequential(
                 modules.WnConv2d(self.reswidth,
@@ -240,7 +240,7 @@ class Model(nn.Module):
             )
             for _ in range(self.nz - 1)])
 
-        self.deepgen_scale = nn.ModuleList([
+        self.deepgen_std = nn.ModuleList([
             # shape: [32,16,16] -> [1,16,16]
             nn.Sequential(
                 modules.WnConv2d(self.reswidth,
@@ -304,8 +304,8 @@ class Model(nn.Module):
         )
 
         # the scale parameter of the bottom (zi = 1) generative model is modelled unconditional
-        self.gen_scale = nn.Parameter(torch.Tensor(*self.xs))
-        nn.init.zeros_(self.gen_scale)
+        self.gen_std = nn.Parameter(torch.Tensor(*self.xs))
+        nn.init.zeros_(self.gen_std)
 
     # function to set the model to compression mode
     def compress(self, compress=True):
@@ -346,7 +346,7 @@ class Model(nn.Module):
 
                 # scale parameter of the conditional Logistic distribution
                 # clamp the output of the scale parameter between [0.1, 1.0] for stability
-                scale = 0.1 + 0.9 * self.sigmoid(self.infer_scale(h) + 2.)
+                scale = 0.1 + 0.9 * self.sigmoid(self.infer_std(h) + 2.)
 
             # deeper latent layers
             else:
@@ -365,7 +365,7 @@ class Model(nn.Module):
 
                 # scale parameter of the conditional Logistic distribution
                 # clamp the output of the scale parameter between [0.1, 1.0] for stability
-                scale = 0.1 + 0.9 * self.sigmoid(self.deepinfer_scale[i - 1](h) + 2.)
+                scale = 0.1 + 0.9 * self.sigmoid(self.deepinfer_std[i - 1](h) + 2.)
 
             if self.compressing:
                 # if compressing, the "batch-size" can only be 1
@@ -408,7 +408,7 @@ class Model(nn.Module):
 
                 # scale parameter of the conditional Logistic distribution
                 # set a minimal value for the scale parameter of the bottom generative model
-                scale = ((2. / 255.) / 8.) + modules.softplus(self.gen_scale)
+                scale = ((2. / 255.) / 8.) + modules.softplus(self.gen_std)
 
             # deeper latent layers
             else:
@@ -423,7 +423,7 @@ class Model(nn.Module):
 
                 # scale parameter of the conditional Logistic distribution
                 # clamp the output of the scale parameter between [0.1, 1.0] for stability
-                scale = 0.1 + 0.9 * modules.softplus(self.deepgen_scale[i - 1](h) + np.log(np.exp(1.) - 1.))
+                scale = 0.1 + 0.9 * modules.softplus(self.deepgen_std[i - 1](h) + np.log(np.exp(1.) - 1.))
 
 
             if self.compressing:
@@ -841,7 +841,7 @@ if __name__ == '__main__':
     parser.add_argument('--dropout', default=0.3, type=float, help="dropout rate of the hidden units")
     parser.add_argument('--kernel', default=3, type=int, help="size of the convolutional filter (kernel) in the ResNet blocks")
     parser.add_argument('--batch', default=16, type=int, help="size of the mini-batch for gradient descent")
-    parser.add_argument('--dist', default=0, type=int, help="distribute (1) over different gpu's and use Horovod to do so, or not (0)")
+    parser.add_argument('--dist', default=1, type=int, help="distribute (1) over different gpu's and use Horovod to do so, or not (0)")
     parser.add_argument('--lr', default=2e-3, type=float, help="learning rate gradient descent")
     parser.add_argument('--schedule', default=1, type=float, help="learning rate schedule: yes (1) or no (0)")
     parser.add_argument('--decay', default=0.999995, type=float, help="decay of the learning rate when using learning rate schedule")

@@ -1,6 +1,6 @@
 # Bit-Swap
 
-Code for reproducing results of [Bit-Swap: Practical Lossless Compression with Recursive Bits Back Coding]().
+Code for reproducing results of [Bit-Swap: Recursive Bits-Back Coding for Lossless Compression with Hierarchical Latent Variables]().
 
 The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper is written by [Friso H. Kingma](https://www.fhkingma.com/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/).
 
@@ -116,7 +116,7 @@ mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ### Compression
 ##### Pre-Trained model checkpoints
-We will release the pretrained (PyTorch) mdoels soon.
+We will release the pretrained (PyTorch) models soon.
 
 ##### MNIST
 ###### 8 latent layers
