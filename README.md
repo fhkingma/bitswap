@@ -2,21 +2,22 @@
 
 Code for reproducing results of [Bit-Swap: Practical Lossless Compression with Recursive Bits Back Coding]().
 
-The code is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/). The paper is written by [Friso H. Kingma](https://www.linkedin.com/in/friso-kingma-b94496a0/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/). You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
+The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper is written by [Friso H. Kingma](https://www.fhkingma.com/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/).
 
 
 ## Introduction
-We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed in [(Townsend et al., 2018)](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. When considering the average net bitrate (explained in Section 2.3 in the paper), Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
+We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed in [(Townsend et al., 2018)](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
 
 |              | MNIST | CIFAR-10 | ImageNet (32x32) |
 |--------------|-------|----------|------------------|
 | Uncompressed | 8.00  | 8.00     | 8.00             |
-| gzip         | 1.63  | 7.36     | 7.31             |
-| bz2          | 1.41  | 6.94     | 6.99             |
-| LZMA         | 1.39  | 6.06     | 6.09             |
-| PNG          | 2.80  | 5.87     | 6.39             |
-| WebP         | 2.10  | 4.61     | 5.29             |
-| **Bit-Swap** | **1.27**|**3.79**|**4.48**          |
+| [GNU gzip](http://www.gnu.org/home.en.html)         | 1.65  | 7.37     | 7.31             |
+| [bzip2](http://www.bzip.org/)          | 1.59  | 6.98     | 7.00             |
+| [LZMA](https://www.7-zip.org/)         | 1.49  | 6.09     | 6.15             |
+| [PNG](http://www.libpng.org/pub/png/)          | 2.80  | 5.87     | 6.39             |
+| [WebP](https://en.wikipedia.org/wiki/WebP)         | 2.10  | 4.61     | 5.29             |
+| [BB-ANS](https://github.com/bits-back/bits-back)       | 1.48  | 4.19     | 4.66             |
+| **Bit-Swap** | **1.29**|**3.82**|**4.48**          |
 
 ## Overview
 The repository consists of two main parts:
@@ -51,11 +52,7 @@ are in the top directory. The script for compression using the benchmark compres
 - Scipy (1.1.0)
 - Scikit-learn (0.20.1)
 
-Run
-```
-pip install -r requirements.txt
-```
-and add the top directory to the ``$PYTHONPATH`` variable. For example:
+Add the top directory of the repository to the ``$PYTHONPATH`` variable. For example:
 ```
 export PYTHONPATH=$PYTHONPATH:~/bitswap
 ```
@@ -101,7 +98,7 @@ mpiexec -np 8 python cifar_train.py --nz=1 --width=256
 ```
 ##### ImageNet (32x32) (on 8 GPU's with OpenMPI + Horovod)
 ###### Prepare ImageNet (32x32)
-First download the version of ImageNet that is downsized to 32x32 pixels [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in the directory ``model/data/imagenet/``. After that, run
+First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in the directory ``model/data/imagenet/``. After that, run
 ```
 python create_imagenet.py
 ```
@@ -119,7 +116,7 @@ mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ### Compression
 ##### Pre-Trained model checkpoints
-You can download our pretrained (PyTorch) models used in the paper [here](http://www.fhkingma.com/bitswap/params.zip).
+We will release the pretrained (PyTorch) mdoels soon.
 
 ##### MNIST
 ###### 8 latent layers
@@ -204,5 +201,3 @@ citation
 
 ## Questions
 Please contact Friso Kingma ([fhkingma@gmail.com](mailto:fhkingma@gmail.com)) if you have any questions.
-
-## Credits and Acknowledgements
