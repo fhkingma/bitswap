@@ -1,12 +1,12 @@
 # Bit-Swap
 
-Code for reproducing results of [Bit-Swap: Recursive Bits-Back Coding for Lossless Compression with Hierarchical Latent Variables]().
+Code for reproducing results of [Bit-Swap: Recursive Bits-Back Coding for Lossless Compression with Hierarchical Latent Variables](https://arxiv.org/abs/1905.06845), appearing at International Conference on Machine Learning 2019.
 
 The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper is written by [Friso H. Kingma](https://www.fhkingma.com/), [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/) and [Jonathan Ho](http://www.jonathanho.me/).
 
 
 ## Introduction
-We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed in [(Townsend et al., 2018)](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
+We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed by [Townsend et al, 2018](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
 
 |              | MNIST | CIFAR-10 | ImageNet (32x32) |
 |--------------|-------|----------|------------------|
@@ -195,8 +195,15 @@ python stackplot.py
 ```
 
 ## Citation
+If you find our work useful, please cite us in your work.
+
 ```
-citation
+@inproceedings{kingma2019bitswap,
+  title={Bit-Swap: Recursive Bits-Back Coding for Lossless Compression with Hierarchical Latent Variables},
+  author={Kingma, Friso H and Abbeel, Pieter and Ho, Jonathan},
+  booktitle={International Conference on Machine Learning},
+  year={2010}
+}
 ```
 
 ## Questions
