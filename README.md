@@ -202,7 +202,7 @@ If you find our work useful, please cite us in your work.
   title={Bit-Swap: Recursive Bits-Back Coding for Lossless Compression with Hierarchical Latent Variables},
   author={Kingma, Friso H and Abbeel, Pieter and Ho, Jonathan},
   booktitle={International Conference on Machine Learning},
-  year={2010}
+  year={2019}
 }
 ```
 
