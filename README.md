@@ -17,7 +17,7 @@ We present a lossless compression scheme, called Bit-Swap, that results in compr
 | [PNG](http://www.libpng.org/pub/png/)          | 2.80  | 5.87     | 6.39             |
 | [WebP](https://en.wikipedia.org/wiki/WebP)         | 2.10  | 4.61     | 5.29             |
 | [BB-ANS](https://github.com/bits-back/bits-back)       | 1.48  | 4.19     | 4.66             |
-| **Bit-Swap** | **1.29**|**3.82**|**4.48**          |
+| **Bit-Swap** | **1.29**|**3.82**|**4.50**          |
 
 ## Overview
 The repository consists of two main parts:
