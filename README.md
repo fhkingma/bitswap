@@ -6,18 +6,7 @@ The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper i
 
 
 ## Introduction
-We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed by [Townsend et al, 2018](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators. Bit-Swap outperforms other benchmark lossless compression schemes on [MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) and [ImageNet (32x32)](http://image-net.org/small/download.php). The table below shows the performance measured in bits per dimension (bits/dim).
-
-|              | MNIST | CIFAR-10 | ImageNet (32x32) |
-|--------------|-------|----------|------------------|
-| Uncompressed | 8.00  | 8.00     | 8.00             |
-| [GNU gzip](http://www.gnu.org/home.en.html)         | 1.65  | 7.37     | 7.31             |
-| [bzip2](http://www.bzip.org/)          | 1.59  | 6.98     | 7.00             |
-| [LZMA](https://www.7-zip.org/)         | 1.49  | 6.09     | 6.15             |
-| [PNG](http://www.libpng.org/pub/png/)          | 2.80  | 5.87     | 6.39             |
-| [WebP](https://en.wikipedia.org/wiki/WebP)         | 2.10  | 4.61     | 5.29             |
-| [BB-ANS](https://github.com/bits-back/bits-back)       | 1.48  | 4.19     | 4.66             |
-| **Bit-Swap** | **1.29**|**3.82**|**4.50**          |
+We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed by [Townsend et al, 2018](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators.
 
 ## Overview
 The repository consists of two main parts:
