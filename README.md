@@ -114,10 +114,10 @@ mpiexec -np 8 python imagenetcrop_train.py --nz=4 --width=256
 ### Compression
 ##### Pre-Trained model checkpoints
 Pretrained (PyTorch) model checkpoints.
-- [MNIST](http://fhkingma.com/bit-swap/mnist_checkpoints.zip)
-- [CIFAR-10](http://fhkingma.com/bit-swap/cifar_checkpoints.zip)
-- [ImageNet (32x32)](http://fhkingma.com/bit-swap/imagenet_checkpoints.zip)
-- [ImageNet (unscaled)](http://fhkingma.com/bit-swap/imaganetcrop_checkpoints.zip)
+- [MNIST](http://fhkingma.com/bitswap/mnist_checkpoints.zip)
+- [CIFAR-10](http://fhkingma.com/bitswap/cifar_checkpoints.zip)
+- [ImageNet (32x32)](http://fhkingma.com/bitswap/imagenet_checkpoints.zip)
+- [ImageNet (unscaled)](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip)
 
 ##### MNIST
 ###### 8 latent layers
