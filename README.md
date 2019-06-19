@@ -112,7 +112,7 @@ Coming soon.
 mpiexec -np 8 python imagenetcrop_train.py --nz=4 --width=256
 ```
 ### Compression
-##### Pre-Trained model checkpoints
+##### Pretrained model checkpoints
 Pretrained (PyTorch) model checkpoints.
 - [MNIST](http://fhkingma.com/bitswap/mnist_checkpoints.zip)
 - [CIFAR-10](http://fhkingma.com/bitswap/cifar_checkpoints.zip)
