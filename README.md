@@ -17,7 +17,7 @@ Scripts relating to **training of the models** on
 - MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py))
 - CIFAR-10 ([``cifar_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py))
 - ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py))
-- ImageNet (unscaled) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenetcrop_train.py)) 
+- ImageNet (unscaled) ([``imagenetcrop_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenetcrop_train.py)) 
 
 can be found in the subdirectory [``/model``](https://github.com/fhkingma/bitswap/tree/master/model). 
 
