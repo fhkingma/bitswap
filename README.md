@@ -13,7 +13,7 @@ The repository consists of two main parts:
 - Training of the variational autoencoders
 - Compression with Bit-Swap and BB-ANS using the trained models
 
-Scripts relating to **training of the models** on 
+Scripts relating to **training of the models** on the training sets of 
 - MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py))
 - CIFAR-10 ([``cifar_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py))
 - ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py))
@@ -21,7 +21,7 @@ Scripts relating to **training of the models** on
 
 can be found in the subdirectory [``/model``](https://github.com/fhkingma/bitswap/tree/master/model). 
 
-Scripts relating to **compression with Bit-Swap and BB-ANS** of 
+Scripts relating to **compression with Bit-Swap and BB-ANS** of the (partial) test sets of
 - MNIST ([``mnist_compress.py``](https://github.com/fhkingma/bitswap/blob/master/mnist_compress.py))
 - CIFAR-10 ([``cifar_compress.py``](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py))
 - ImageNet (32x32) ([``imagenet_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) 
