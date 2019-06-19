@@ -16,7 +16,8 @@ The repository consists of two main parts:
 Scripts relating to **training of the models** on 
 - MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py))
 - CIFAR-10 ([``cifar_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py))
-- ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py)) 
+- ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py))
+- ImageNet (unscaled) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenetcrop_train.py)) 
 
 can be found in the subdirectory [``/model``](https://github.com/fhkingma/bitswap/tree/master/model). 
 
@@ -103,9 +104,20 @@ mpiexec -np 8 python imagenet_train.py --nz=2 --width=255
 ```
 mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
+##### ImageNet (unscaled) (on 8 GPU's with OpenMPI + Horovod)
+###### Prepare ImageNet (unscaled)
+Coming soon.
+###### 4 latent layers
+```
+mpiexec -np 8 python imagenetcrop_train.py --nz=4 --width=256
+```
 ### Compression
 ##### Pre-Trained model checkpoints
-We will release the pretrained (PyTorch) models soon.
+Pretrained (PyTorch) model checkpoints.
+- [MNIST](http://fhkingma.com/bit-swap/mnist_checkpoints.zip)
+- [CIFAR-10](http://fhkingma.com/bit-swap/cifar_checkpoints.zip)
+- [ImageNet (32x32)](http://fhkingma.com/bit-swap/imagenet_checkpoints.zip)
+- [ImageNet (unscaled)](http://fhkingma.com/bit-swap/imaganetcrop_checkpoints.zip)
 
 ##### MNIST
 ###### 8 latent layers
