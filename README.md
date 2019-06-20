@@ -11,7 +11,7 @@ The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper i
 4. [Launch](#launch)
     1. [Model training](#training)
     2. [Compression](#compression)
-    2. [Benchmark Compressors](#benchmark)
+    2. [Benchmark compressors](#benchmark)
     3. [Plots](#plots)
 5. [Demo (coming soon)](#demo)
 6. [Citation](#citation)
