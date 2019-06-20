@@ -19,7 +19,33 @@ The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper i
 
 <a name="introduction"></a>
 ## Introduction
-We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed by [Townsend et al, 2018](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We expanded BB-ANS to hierarchical latent variable models, that are known to be better density estimators.
+We present a lossless compression scheme, called Bit-Swap, that results in compression rates that are empirically superior to existing techniques. Our work builds on [BB-ANS](https://github.com/bits-back/bits-back) that was originally proposed by [Townsend et al, 2019](https://arxiv.org/abs/1901.04866). BB-ANS exploits the combination of the ''bits back'' argument [(Hinton & Van Camp, 1993)](http://www.cs.toronto.edu/~fritz/absps/colt93.pdf), latent variable models and the entropy encoding technique Asymmetric Numeral Systems (ANS) [(Duda, 2009)](https://arxiv.org/abs/0902.0271). We extended BB-ANS to be more efficient for hierarchical latent variable models, that are known to be better density estimators.
+
+In one of the experiments, we compressed 100 unscaled and cropped images of ImageNet with Bit-Swap, BB-ANS and other benchmark compressors. Details of the experimental setup can be found [here](#expsetup) or in the [paper](https://arxiv.org/abs/1905.06845). In this regime, Bit-Swap outperforms the other compression schemes. The experimental setup and results of the other experiments can be found in the paper.
+
+| Compression Scheme | Rate (bits/dim) |
+|--------------------|-----------------|
+| *Uncompressed*       | *8.00*            |
+| GNU Gzip           | 5.96            |
+| bzip2              | 5.07            |
+| LZMA               | 5.09            |
+| PNG                | 4.71            |
+| WebP               | 3.66            |
+| BB-ANS             | 3.62            |
+| **Bit-Swap**           | **3.51**            |
+
+<a name="expsetup"></a>
+##### Experimental setup: compression of unscaled and cropped ImageNet
+For this experiment, we constructed our own train and test set of ImageNet images as described in the instructions [here](#imagenetunscaled). We trained a model on random 32x23 pixel-patches of the constructed train set. Afterwards we 
+1. independently took 100 images from the constructed test set
+2. cropped the images to multiples of 32 pixels on each side
+3. split the images up into grids of 32x32 pixel-blocks
+4. compressed the resulting sequence of pixel-blocks of every image with Bit-Swap and BB-ANS and finally
+5. calculated the average bitrate over the pixel-blocks of **every image** independently.
+
+We also compressed the cropped images resulting from step 2 with other benchmark compressors.
+
+
 
 <a name="overview"></a>
 ## Overview
@@ -87,6 +113,7 @@ First download the downsized version of ImageNet [here](http://image-net.org/sma
 python create_imagenet.py
 ```
 
+<a name="imagenetunscaled"></a>
 ##### Prepare ImageNet (unscaled)
 First download the unscaled ImageNet validation set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar) and the test set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_test.tar). Unpack the images of both datasets in ``model/data/imagenet/train/class``. After that, independently take 5000 images from this folder and move them into ``model/data/imagenet/test/class``. In Ubuntu, this can be achieved with the following commands:
 ```
