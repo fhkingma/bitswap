@@ -113,11 +113,11 @@ mpiexec -np 8 python imagenetcrop_train.py --nz=4 --width=256
 ```
 ### Compression
 ##### Pretrained model checkpoints
-Pretrained (PyTorch) model checkpoints.
-- [MNIST](http://fhkingma.com/bitswap/mnist_checkpoints.zip)
-- [CIFAR-10](http://fhkingma.com/bitswap/cifar_checkpoints.zip)
-- [ImageNet (32x32)](http://fhkingma.com/bitswap/imagenet_checkpoints.zip)
-- [ImageNet (unscaled)](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip)
+Instructions for pretrained (PyTorch) model checkpoints:
+- Download [MNIST](http://fhkingma.com/bitswap/mnist_checkpoints.zip) and unpack in ``/model/params/mnist``
+- Download [CIFAR-10](http://fhkingma.com/bitswap/cifar_checkpoints.zip) and unpack in ``/model/params/cifar``
+- Download [ImageNet (32x32)](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
+- Download [ImageNet (unscaled)](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
 
 ##### MNIST
 ###### 8 latent layers
@@ -194,6 +194,9 @@ python cma.py
 ```
 python stackplot.py
 ```
+
+## DEMO: Compress your own image with Bit-Swap
+Coming soon.
 
 ## Citation
 If you find our work useful, please cite us in your work.
