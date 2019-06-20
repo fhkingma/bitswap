@@ -17,7 +17,9 @@ Scripts relating to **training of the models** on the training sets of
 - MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py))
 - CIFAR-10 ([``cifar_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/cifar_train.py))
 - ImageNet (32x32) ([``imagenet_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenet_train.py))
-- ImageNet (unscaled) ([``imagenetcrop_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenetcrop_train.py)) 
+
+and on random 32x32 pixel-patches of
+- ImageNet (original size: unscaled and uncropped) ([``imagenetcrop_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/imagenetcrop_train.py)) 
 
 can be found in the subdirectory [``/model``](https://github.com/fhkingma/bitswap/tree/master/model). 
 
@@ -26,9 +28,25 @@ Scripts relating to **compression with Bit-Swap and BB-ANS** of the (partial) te
 - CIFAR-10 ([``cifar_compress.py``](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py))
 - ImageNet (32x32) ([``imagenet_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) 
 
-are in the top directory. The script for compression using the benchmark compressors ([``benchmark_compress.py``](https://github.com/fhkingma/bitswap/blob/master/benchmark_compress.py)) and the script for discretization of the latent space ([``discretization.py``](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
+and on 100 images independently taken from the test set of unscaled ImageNet, cropped to multiples of 32 pixels on each side
 
-## Requirements
+- ImageNet (unscaled and cropped) ([``imagenetcrop_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenetcrop_compress.py))
+
+are in the top directory. The script for compression using the benchmark compressors ([``benchmark_compress.py``](https://github.com/fhkingma/bitswap/blob/master/benchmark_compress.py)) and the script for discretization of the latent space ([``discretization.py``](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory. The script [``imagenetcrop_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenetcrop_compress.py) also directly compresses the images with the benchmark compressors.
+
+## Contents
+
+1. [Requirements](#requirements)
+2. [Launch](#launch)
+    1. [Launch](#training)
+    2. [Compression](#compression)
+    2. [Benchmark Compressors](#benchmark)
+    3. [Plots](#plots)
+3. [Demo](#demo)
+4. [Citation](#citation)
+4. [Questions](#questions)
+
+## Requirements <a name="requirements"></a>
 - Python (3.7)
 - OpenMPI and Horovod (0.16.0)
 - Numpy (1.15.4)
@@ -49,9 +67,9 @@ export PYTHONPATH=$PYTHONPATH:~/bitswap
 
 Installation instructions for OpenMPI + Horovod are available on the [github page of Horovod](https://github.com/horovod/horovod).
 
-## Launch
+## Launch <a name="launch"></a>
 
-### Model training
+### Model training <a name="training"></a>
 ##### MNIST (on 1 GPU)
 ###### 8 latent layers
 ```
@@ -88,7 +106,7 @@ mpiexec -np 8 python cifar_train.py --nz=1 --width=256
 ```
 ##### ImageNet (32x32) (on 8 GPU's with OpenMPI + Horovod)
 ###### Prepare ImageNet (32x32)
-First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in the directory ``model/data/imagenet/``. After that, run
+First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in ``model/data/imagenet/train`` and ``model/data/imagenet/test`` respectively. After that, run
 ```
 python create_imagenet.py
 ```
@@ -106,18 +124,22 @@ mpiexec -np 8 python imagenet_train.py --nz=1 --width=256
 ```
 ##### ImageNet (unscaled) (on 8 GPU's with OpenMPI + Horovod)
 ###### Prepare ImageNet (unscaled)
-Coming soon.
+First download the unscaled ImageNet validation set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar) and the test set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_test.tar). Unpack the images of both datasets in ``model/data/imagenet/train/class``. After that, independently take 5000 images from this folder and move them into ``model/data/imagenet/test/class``. In Ubuntu, this can be achieved with the following commands:
+```
+cd ~/bitswap/model/data/imagenetcrop/train/class
+ls | shuf -n 5000 | xargs -i mv {} ~/bitswap/model/data/imagenetcrop/test/class
+```
 ###### 4 latent layers
 ```
 mpiexec -np 8 python imagenetcrop_train.py --nz=4 --width=256
 ```
-### Compression
+### Compression <a name="compression"></a>
 ##### Pretrained model checkpoints
 Instructions for pretrained (PyTorch) model checkpoints:
-- Download [MNIST](http://fhkingma.com/bitswap/mnist_checkpoints.zip) and unpack in ``/model/params/mnist``
-- Download [CIFAR-10](http://fhkingma.com/bitswap/cifar_checkpoints.zip) and unpack in ``/model/params/cifar``
-- Download [ImageNet (32x32)](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
-- Download [ImageNet (unscaled)](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
+- Download [MNIST model checkpoints](http://fhkingma.com/bitswap/mnist_checkpoints.zip) and unpack in ``/model/params/mnist``
+- Download [CIFAR-10 model checkpoints](http://fhkingma.com/bitswap/cifar_checkpoints.zip) and unpack in ``/model/params/cifar``
+- Download [ImageNet (32x32) model checkpoints](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
+- Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
 
 ##### MNIST
 ###### 8 latent layers
@@ -179,12 +201,17 @@ python imagenet_compress.py --nz=2 --bitswap=1
 python imagenet_compress.py --nz=2 --bitswap=0
 ```
 
-### Benchmark compressors
+##### ImageNet (unscaled & cropped)
+```
+python imagenetcrop_compress.py
+```
+
+### Benchmark compressors <a name="benchmark"></a>
 ```
 python benchmark_compress.py
 ```
 
-### Plots
+### Plots <a name="plots"></a>
 ##### Cumulative Moving Averages (CMA) of the compression results
 ```
 python cma.py
@@ -195,10 +222,10 @@ python cma.py
 python stackplot.py
 ```
 
-## DEMO: Compress your own image with Bit-Swap
+## DEMO: Compress your own image with Bit-Swap <a name="demo"></a>
 Coming soon.
 
-## Citation
+## Citation <a name="citation"></a>
 If you find our work useful, please cite us in your work.
 
 ```
@@ -210,5 +237,5 @@ If you find our work useful, please cite us in your work.
 }
 ```
 
-## Questions
+## Questions <a name="questions"></a>
 Please contact Friso Kingma ([fhkingma@gmail.com](mailto:fhkingma@gmail.com)) if you have any questions.
