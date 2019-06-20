@@ -205,8 +205,8 @@ python imagenet_compress.py --nz=2 --bitswap=0
 ```
 python imagenetcrop_compress.py
 ```
-
-### Benchmark compressors <a name="benchmark"></a>
+<a name="benchmark"></a>
+### Benchmark compressors
 ```
 python benchmark_compress.py
 ```
