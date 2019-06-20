@@ -13,7 +13,7 @@ The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper i
     2. [Compression](#compression)
     2. [Benchmark Compressors](#benchmark)
     3. [Plots](#plots)
-5. [Demo](#demo)
+5. [Demo (coming soon)](#demo)
 6. [Citation](#citation)
 7. [Questions](#questions)
 
