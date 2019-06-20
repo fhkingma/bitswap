@@ -26,7 +26,7 @@ Scripts relating to **compression with Bit-Swap and BB-ANS** of the (partial) te
 - CIFAR-10 ([``cifar_compress.py``](https://github.com/fhkingma/bitswap/blob/master/cifar_compress.py))
 - ImageNet (32x32) ([``imagenet_compress.py``](https://github.com/fhkingma/bitswap/blob/master/imagenet_compress.py)) 
 
-are in the top directory. The script for compression using the benchmark compressors ([``benchmark_compress.py``]()) and the script for discretization of the latent space ([``discretization.py``](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
+are in the top directory. The script for compression using the benchmark compressors ([``benchmark_compress.py``](https://github.com/fhkingma/bitswap/blob/master/benchmark_compress.py)) and the script for discretization of the latent space ([``discretization.py``](https://github.com/fhkingma/bitswap/blob/master/discretization.py)) can also be found in the top directory.
 
 ## Requirements
 - Python (3.7)
