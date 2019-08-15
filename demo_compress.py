@@ -199,11 +199,29 @@ def input_image():
         cropped = True if (old_h != h and old_w != w) else False
         return blocks, old_h, old_w, h, w, cropped, dir, filename, file_ext
 
+def RepresentsInt(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+def input_gpu():
+    print("We highly recommend using GPU's.")
+    print("Give GPU index (0, 1, 2 etc.) or CPU (-1) if that is the only option.")
+    while True:
+        sys.stdout.write("Index: ")
+        gpu = input()
+
+        if not RepresentsInt(gpu):
+            print("Index must be an integer.")
+            continue
+
+        return int(gpu)
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', default=-1, type=int, help="-1: use the cpu, [0,1,2,...]: use gpu with index")
-    args = parser.parse_args()
-    gpu = args.gpu
+    # retrieve GPU index
+    gpu = input_gpu()
 
     # retrieve image from path
     # execute some checks

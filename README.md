@@ -13,7 +13,7 @@ The code is written by [Friso H. Kingma](https://www.fhkingma.com/). The paper i
     2. [Compression](#compression)
     2. [Benchmark compressors](#benchmark)
     3. [Plots](#plots)
-5. [Demo (coming soon)](#demo)
+5. [Demo](#demo)
 6. [Citation](#citation)
 7. [Questions](#questions)
 
@@ -270,10 +270,22 @@ python cma.py
 ```
 python stackplot.py
 ```
+<a name="demo"></a>
+## DEMO: Compress your own image with Bit-Swap
+To compress, run
+```
+python demo_compress.py
+```
+It will ask for the GPU number, which most likely is 0. Afterwards, it will ask for an image.
+The image first gets decompressed using it's own file format, which results in raw pixel data, after which the raw pixel data gets compressed by Bit-Swap and other benchmark compressors.
+The resulting encoded image is saved to a file named after the original filename, appended with '_' and the name of the corresponding compression scheme.
 
-## DEMO: Compress your own image with Bit-Swap <a name="demo"></a>
-Coming soon.
-
+To compress the Bit-Swap file, run
+```
+python demo_decompress.py
+```
+It will ask again for the GPU number, after which it will ask for the Bit-Swap encoded image file.
+The image gets decompressed, reconstructed and saved to a .jpeg format.
 <a name="citation"></a>
 ## Citation
 If you find our work useful, please cite us in your work.
