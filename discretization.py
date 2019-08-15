@@ -13,7 +13,6 @@ def discretize(nz, quantbits, type, device, model, dataset):
     # total number of samples (ppb * number of bins)
     nsamples = ppb * (1 << quantbits)
 
-    print(f"{nsamples} samples for discretization per dimension")
     with torch.no_grad():
         # check if there does already exists a file with the discretization bins saved into it
         if not os.path.exists(f'bins/{dataset}_nz{nz}_zendpoints{quantbits}.pt'):

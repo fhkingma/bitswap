@@ -51,16 +51,14 @@ We also compressed the cropped images resulting from step 2 with other benchmark
 ## Overview
 **Note**: Before executing any of the scripts, look through the [requirements](#requirements) section and make sure **all** the requirements are satisfied.
 
-The repository consists of two main parts:
-<!-- - A demo to compress and decompress your own image. -->
+The repository consists of three main parts:
+- A demo to compress and decompress your own image.
 - Training of the variational autoencoders.
 - Compression with Bit-Swap and BB-ANS using the trained models.
 
-<!--
 Scripts relating to the demo, including
-- Compression of your own image to a ``.bitswap`` file ([``image_compress.py``](https://github.com/fhkingma/bitswap/blob/master/image_compress.py))
-- Decompression of the resulting ``.bitswap`` file to a reconstruction of your image ([``image_decompress.py``](https://github.com/fhkingma/bitswap/blob/master/image_decompress.py))
--->
+- Compression of your own image with Bit-Swap to a file ([``image_compress.py``](https://github.com/fhkingma/bitswap/blob/master/image_compress.py))
+- Decompression with Bit-Swap to a reconstruction of your image ([``image_decompress.py``](https://github.com/fhkingma/bitswap/blob/master/image_decompress.py))
 
 Scripts relating to **training of the models** on the training sets of 
 - MNIST ([``mnist_train.py``](https://github.com/fhkingma/bitswap/blob/master/model/mnist_train.py))
@@ -107,6 +105,7 @@ export PYTHONPATH=$PYTHONPATH:~/bitswap
 
 Installation instructions for OpenMPI + Horovod are available on the [github page of Horovod](https://github.com/horovod/horovod).
 
+We also **highly recommend** using GPU's and a machine with a large memory capacity. PyTorch is highly optimized for GPU deployment and some calculations (especially discretization) might take up a large amount of memory.
 ##### Prepare ImageNet (32x32)
 First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in ``model/data/imagenet/train`` and ``model/data/imagenet/test`` respectively. After that, run
 ```
@@ -127,7 +126,10 @@ Pretrained (PyTorch) model checkpoints:
 - Download [MNIST model checkpoints](http://fhkingma.com/bitswap/mnist_checkpoints.zip) and unpack in ``/model/params/mnist``
 - Download [CIFAR-10 model checkpoints](http://fhkingma.com/bitswap/cifar_checkpoints.zip) and unpack in ``/model/params/cifar``
 - Download [ImageNet (32x32) model checkpoints](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
-- Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imaganetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
+- Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imagenetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
+
+##### Discretization bins
+Coming soon.
 
 <a name="launch"></a>
 ## Launch

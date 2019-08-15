@@ -113,14 +113,8 @@ def compress(quantbits, nz, bitswap, gpu, blocks):
     xendpoints = xbins.endpoints()
     xcentres = xbins.centres()
 
-    # <=== DATA ===>
-    class ToInt:
-        def __call__(self, pic):
-            return pic * 255
-    transform_ops = transforms.Compose([transforms.ToTensor(), ToInt()])
-
     # compression experiment params
-    nblocks, h, w, c = blocks.shape
+    nblocks = blocks.shape[0]
 
     # < ===== COMPRESSION ===>
     # initialize compression
@@ -133,7 +127,7 @@ def compress(quantbits, nz, bitswap, gpu, blocks):
     iterator = tqdm(range(nblocks), desc="Compression")
     for xi in iterator:
         x = blocks[xi]
-        x = transform_ops(Image.fromarray(x)).to(device).view(xdim)
+        x = torch.from_numpy(x).to(device).view(xdim)
 
         if bitswap:
             # < ===== Bit-Swap ====>
@@ -215,7 +209,7 @@ def compress(quantbits, nz, bitswap, gpu, blocks):
         # calculating bits
         totalbits = (len(state) - (len(restbits) - 1)) * 32
 
-    bitsperdim = totalbits / (nblocks * h * w * c)
+    bitsperdim = totalbits / (nblocks * 32 * 32 * 3)
     return bitsperdim
 
 def convert_image_to_numpy(*, path=''):
