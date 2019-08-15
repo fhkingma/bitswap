@@ -237,10 +237,6 @@ if __name__ == '__main__':
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = True
 
-    blocks = blocks[0][np.newaxis, :]
-    h = 32
-    w = 32
-
     # reconstruct from crop
     img_uncompressed = unextract_blocks(blocks, h, w)
 
