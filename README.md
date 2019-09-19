@@ -272,11 +272,11 @@ python stackplot.py
 ```
 <a name="demo"></a>
 ## DEMO: Compress your own image with Bit-Swap
-To compress, run
+First, clone the repository to your machine. To compress, run
 ```
 python demo_compress.py
 ```
-It will ask for the GPU number, which most likely is 0. Afterwards, it will ask for an image.
+The script will ask for the GPU index, which most likely is 0. Afterwards, it will ask for an image.
 The image first gets decompressed using it's own file format, which results in raw pixel data, after which the raw pixel data gets compressed by Bit-Swap and other benchmark compressors.
 The resulting encoded image is saved to a file named after the original filename, appended with '_' and the name of the corresponding compression scheme.
 
@@ -284,7 +284,7 @@ To compress the Bit-Swap file, run
 ```
 python demo_decompress.py
 ```
-It will ask again for the GPU number, after which it will ask for the Bit-Swap encoded image file.
+It will ask again for the GPU index, after which it will ask for the Bit-Swap encoded image file.
 The image gets decompressed, reconstructed and saved to a .jpeg format.
 <a name="citation"></a>
 ## Citation
