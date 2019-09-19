@@ -286,6 +286,8 @@ python demo_decompress.py
 ```
 It will ask again for the GPU index, after which it will ask for the Bit-Swap encoded image file.
 The image gets decompressed, reconstructed and saved to a .jpeg format.
+
+**If there are any bugs, please contact Friso Kingma by e-mail: ([fhkingma@gmail.com](mailto:fhkingma@gmail.com))**
 <a name="citation"></a>
 ## Citation
 If you find our work useful, please cite us in your work.
