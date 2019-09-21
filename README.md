@@ -280,7 +280,7 @@ The script will ask for the GPU index, which most likely is 0. Afterwards, it wi
 The image first gets decompressed using it's own file format, which results in raw pixel data, after which the raw pixel data gets compressed by Bit-Swap and other benchmark compressors.
 The resulting encoded image is saved to a file named after the original filename, appended with '_' and the name of the corresponding compression scheme.
 
-To compress the Bit-Swap file, run
+To decompress the Bit-Swap file, run
 ```
 python demo_decompress.py
 ```
