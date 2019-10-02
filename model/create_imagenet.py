@@ -35,6 +35,7 @@ def convert_path_to_npy(*, path='~/train_32x32', outfile='~/train_32x32.npy'):
     assert np.min(imgs) >= 0
     print('Total number of images is:', imgs.shape[0])
     print('All assertions done, dumping into npy file')
+    os.mkdir(os.path.dirname(os.path.abspath(outfile)))
     np.save(outfile, imgs)
 
 if __name__ == '__main__':

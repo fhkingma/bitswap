@@ -107,7 +107,7 @@ Installation instructions for OpenMPI + Horovod are available on the [github pag
 
 We also **highly recommend** using GPU's and a machine with a large memory capacity. PyTorch is highly optimized for GPU deployment and some calculations (especially discretization) might take up a large amount of memory.
 ##### Prepare ImageNet (32x32)
-First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in ``model/data/imagenet/train`` and ``model/data/imagenet/test`` respectively. After that, run
+First download the downsized version of ImageNet [here](http://image-net.org/small/download.php). Unpack the train and validation set directories in ``model/data/train_32x32`` and ``model/data/valid_32x32`` respectively. After that, run
 ```
 python create_imagenet.py
 ```
