@@ -274,7 +274,7 @@ python stackplot.py
 ```
 <a name="demo"></a>
 ## DEMO: Compress your own image with Bit-Swap
-First, clone the repository to your machine. To compress, run
+First, clone the repository to your machine and follow the instructions under requirements. To compress, run
 ```
 python demo_compress.py
 ```
