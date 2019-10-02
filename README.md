@@ -128,9 +128,10 @@ Pretrained (PyTorch) model checkpoints:
 - Download [ImageNet (32x32) model checkpoints](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
 - Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imagenetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
 
-##### Discretization bins
-Discretization bins:
-- Download [ImageNet (32x32), ImageNet (unscaled) and DEMO checkpoints](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
+##### Latent space discretization bins
+- Download [MNIST latent space discretization bins](http://fhkingma.com/bitswap/mnist_bins.zip) and unpack in ``/bins``
+- Download [CIFAR-10 latent space discretization bins](http://fhkingma.com/bitswap/cifar_bins.zip) and unpack in ``/bins``
+- Download [ImageNet (32x32), ImageNet (unscaled) and DEMO latent space discretization bins](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
 
 <a name="launch"></a>
 ## Launch
