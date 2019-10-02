@@ -129,7 +129,8 @@ Pretrained (PyTorch) model checkpoints:
 - Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imagenetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
 
 ##### Discretization bins
-Coming soon.
+Discretization bins:
+- Download [ImageNet (32x32), ImageNet (unscaled) and DEMO checkpoints](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
 
 <a name="launch"></a>
 ## Launch
