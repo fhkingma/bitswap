@@ -35,7 +35,7 @@ def discretize(nz, quantbits, type, device, model, dataset):
             if dataset == "cifar":
                 transform_ops = transforms.Compose([transforms.ToTensor(), ToInt()])
                 train_set = datasets.CIFAR10(root="model/data/cifar", train=True, transform=transform_ops, download=True)
-            elif dataset == "imagenet":
+            elif dataset == "imagenet" or dataset == "imagenetcrop":
                 transform_ops = transforms.Compose([transforms.ToTensor(), ToInt()])
                 train_set = modules.ImageNet(root='model/data/imagenet/train', file='train.npy', transform=transform_ops)
             else:

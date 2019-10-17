@@ -106,7 +106,7 @@ def compress(quantbits, nz, bitswap, gpu, blocks):
     model.eval()
 
     # get discretization bins for latent variables
-    zendpoints, zcentres = discretize(nz, quantbits, type, device, model, "imagenet")
+    zendpoints, zcentres = discretize(nz, quantbits, type, device, model, "imagenetcrop")
 
     # get discretization bins for discretized logistic
     xbins = ImageBins(type, device, xdim)

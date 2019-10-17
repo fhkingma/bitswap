@@ -92,7 +92,7 @@ def compress(quantbits, nz, gpu, blocks):
     model.eval()
 
     # get discretization bins for latent variables
-    zendpoints, zcentres = discretize(nz, quantbits, type, device, model, "imagenet")
+    zendpoints, zcentres = discretize(nz, quantbits, type, device, model, "imagenetcrop")
 
     class ToInt:
         def __call__(self, pic):

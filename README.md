@@ -131,7 +131,8 @@ Pretrained (PyTorch) model checkpoints:
 ##### Latent space discretization bins
 - Download [MNIST latent space discretization bins](http://fhkingma.com/bitswap/mnist_bins.zip) and unpack in ``/bins``
 - Download [CIFAR-10 latent space discretization bins](http://fhkingma.com/bitswap/cifar_bins.zip) and unpack in ``/bins``
-- Download [ImageNet (32x32), ImageNet (unscaled) and DEMO latent space discretization bins](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
+- Download [ImageNet (32x32) latent space discretization bins](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
+- Download [ImageNet (unscaled) and DEMO latent space discretization bins](http://fhkingma.com/bitswap/imagenetcrop_bins.zip) and unpack in ``/bins``
 
 <a name="launch"></a>
 ## Launch

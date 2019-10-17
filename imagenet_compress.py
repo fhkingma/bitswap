@@ -379,7 +379,7 @@ if __name__ == '__main__':
     quantbits = args.quantbits
     bitswap = args.bitswap
 
-    for nz in [nz]:
+    for nz in [2, 4]:
         for bits in [quantbits]:
             for bitswap in [bitswap]:
                 compress(bits, nz, bitswap, gpu)
