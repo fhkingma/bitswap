@@ -114,9 +114,9 @@ python create_imagenet.py
 
 <a name="imagenetunscaled"></a>
 ##### Prepare ImageNet (unscaled)
-First download the unscaled ImageNet validation set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar) and the test set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_test.tar). Unpack the images of both datasets in ``model/data/imagenet/train/class``. After that, independently take 5000 images from this folder and move them into ``model/data/imagenet/test/class``. In Ubuntu, this can be achieved with the following commands:
+First download the unscaled ImageNet validation set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar) and the test set [here](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_test.tar). Unpack the images of both datasets in ``model/data/imagenetfull/train/class``. After that, independently take 5000 images from this folder and move them into ``model/data/imagenetfull/test/class``. In Ubuntu, this can be achieved with the following commands:
 ```
-cd ~/bitswap/model/data/imagenetcrop/train/class
+cd ~/bitswap/model/data/imagenetfull/train/class
 ls | shuf -n 5000 | xargs -i mv {} ~/bitswap/model/data/imagenetcrop/test/class
 ```
 

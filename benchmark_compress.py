@@ -5,6 +5,7 @@ import lzma
 import numpy as np
 from utils.torch.modules import ImageNet
 import os
+from PIL.PngImagePlugin import getchunks
 
 from torchvision import datasets, transforms
 import PIL.Image as pimg
@@ -79,10 +80,15 @@ def pimg_compress(format='PNG', **params):
     def compress_fun(images):
         compressed_data = bytearray()
         for n, image in enumerate(images):
-            image = pimg.fromarray(image)
-            img_bytes = io.BytesIO()
-            image.save(img_bytes, format=format, **params)
-            compressed_data.extend(img_bytes.getvalue())
+            img = pimg.fromarray(image)
+            if format == 'PNG':
+                for chunk_type, chunk_data, crc in getchunks(img, optimize=True):
+                    if chunk_type == b'IDAT':
+                        compressed_data.extend(chunk_data)
+            else:
+                img_bytes = io.BytesIO()
+                img.save(img_bytes, format=format, **params)
+                compressed_data.extend(img_bytes.getvalue())
         return compressed_data
     return compress_fun
 
