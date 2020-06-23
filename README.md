@@ -123,16 +123,16 @@ ls | shuf -n 5000 | xargs -i mv {} ~/bitswap/model/data/imagenetcrop/test/class
 <a name="checkpoints"></a>
 ##### Pretrained model checkpoints
 Pretrained (PyTorch) model checkpoints:
-- Download [MNIST model checkpoints](http://fhkingma.com/bitswap/mnist_checkpoints.zip) and unpack in ``/model/params/mnist``
-- Download [CIFAR-10 model checkpoints](http://fhkingma.com/bitswap/cifar_checkpoints.zip) and unpack in ``/model/params/cifar``
-- Download [ImageNet (32x32) model checkpoints](http://fhkingma.com/bitswap/imagenet_checkpoints.zip) and unpack in ``/model/params/imagenet``
-- Download [ImageNet (unscaled) model checkpoints](http://fhkingma.com/bitswap/imagenetcrop_checkpoints.zip) and unpack in ``/model/params/imagenetcrop``
+- Download [MNIST model checkpoints](https://www.dropbox.com/s/fvjtda71dlrklyq/mnist_checkpoints.zip?dl=1) and unpack in ``/model/params/mnist``
+- Download [CIFAR-10 model checkpoints](https://www.dropbox.com/s/nxn60kcap2pszq5/cifar_checkpoints.zip?dl=1) and unpack in ``/model/params/cifar``
+- Download [ImageNet (32x32) model checkpoints](https://www.dropbox.com/s/d4f07yt6r35dxd6/imagenet_checkpoints.zip?dl=1) and unpack in ``/model/params/imagenet``
+- Download [ImageNet (unscaled) model checkpoints](https://www.dropbox.com/s/cbpnu3cm6fnnsf8/imagenetcrop_checkpoints.zip?dl=1) and unpack in ``/model/params/imagenetcrop``
 
 ##### Latent space discretization bins
-- Download [MNIST latent space discretization bins](http://fhkingma.com/bitswap/mnist_bins.zip) and unpack in ``/bins``
-- Download [CIFAR-10 latent space discretization bins](http://fhkingma.com/bitswap/cifar_bins.zip) and unpack in ``/bins``
-- Download [ImageNet (32x32) latent space discretization bins](http://fhkingma.com/bitswap/imagenet_bins.zip) and unpack in ``/bins``
-- Download [ImageNet (unscaled) and DEMO latent space discretization bins](http://fhkingma.com/bitswap/imagenetcrop_bins.zip) and unpack in ``/bins``
+- Download [MNIST latent space discretization bins](https://www.dropbox.com/s/yxi7n2l4dvybiir/mnist_bins.zip?dl=1) and unpack in ``/bins``
+- Download [CIFAR-10 latent space discretization bins](https://www.dropbox.com/s/1cba183j3kbn28h/cifar_bins.zip?dl=1) and unpack in ``/bins``
+- Download [ImageNet (32x32) latent space discretization bins](https://www.dropbox.com/s/tmo07sp54ofto6q/imagenet_bins.zip?dl=1) and unpack in ``/bins``
+- Download [ImageNet (unscaled) and DEMO latent space discretization bins](https://www.dropbox.com/s/un7hdj3hwmq1mlt/imagenetcrop_bins.zip?dl=1) and unpack in ``/bins``
 
 <a name="launch"></a>
 ## Launch
