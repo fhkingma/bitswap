@@ -36,7 +36,7 @@ In one of the experiments, we compressed 100 unscaled and cropped images of Imag
 
 <a name="expsetup"></a>
 ##### Experimental setup: compression of unscaled and cropped ImageNet
-For this experiment, we constructed our own train and test set of ImageNet images as described in the instructions [here](#imagenetunscaled). We trained a model on random 32x23 pixel-patches of the constructed train set. Afterwards we 
+For this experiment, we constructed our own train and test set of ImageNet images as described in the instructions [here](#imagenetunscaled). We trained a model on random 32x32 pixel-patches of the constructed train set. Afterwards we 
 1. independently took 100 images from the constructed test set
 2. cropped the images to multiples of 32 pixels on each side
 3. split the images up into grids of 32x32 pixel-blocks
